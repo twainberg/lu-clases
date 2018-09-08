@@ -1,0 +1,17 @@
+<h1>Gracias por crear el alumno. 
+Ya tenemos 
+    @MVC.Models.Data.Lista.Count
+    alumnos.</h1>
+<a href="/alumno/VoyACrear">Crear otro?</a>
+
+<ul>
+    @foreach(var alumno in Data.Lista)
+    {
+        <li>
+            @(alumno.Nombre + alumno.Apellido)
+            @Html.ActionLink("X", "BorrarUno", "Alumno", new { nombre = alumno.Nombre })
+        </li>
+    }
+</ul>
+
+@Html.ActionLink("Borrar", "Borrar", "Alumno")

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Un documento nuevo</title>
+        <script src="jquery.js"></script>
+        <script>
+            function reqListener () 
+            {
+                alert(this.responseText);
+            }
+                
+            function xmlhttp()
+            {
+                var oReq = new XMLHttpRequest();
+                oReq.addEventListener('load', reqListener);
+                oReq.open('GET', 'http://10.10.20.154:8080/pagina.html');
+                oReq.send();
+            }
+
+            var estadoInicial = true;
+
+            function cambiarEstado() 
+            {
+                var titulo = $('#titulo');
+                titulo = titulo[0];
+                //var titulo = document.getElementById("titulo");
+
+                if (estadoInicial) {
+                    titulo.innerText = 'Capitulo I';
+                    titulo.style.backgroundColor = '#d1e606';   
+                }else{
+                    titulo.innerText = 'Capitulo 1';
+                    titulo.style.backgroundColor = 'white';                      
+                }
+
+                estadoInicial = !estadoInicial;
+            }            
+        </script>
+    </head>
+    <body>
+        <h1 id="titulo">Capítulo 1</h1>
+
+        <p>En un lugar de la mancha que no quiero recordar...</p>
+        <p>El segundo <b>párrafo no <em>me lo acuerdo</em></b>.</p>
+
+        <input type="text" />
+
+        <h2>Parte 1</h2>
+
+        <p>Esta es una lista sin ordenar:</p>
+        <ul>
+            <li>Primero</li>
+            <li>Segundo</li>
+            <li>Tercero</li>
+            <li>Cuarto:
+                <ul>
+                    <li>4-1</li>
+                    <li>4-2</li>
+                    <li>4-3</li>
+                    <li>4-4</li>
+                </ul>
+            </li>
+        </ul>
+
+        <p>Esta es una lista ordenada:</p>
+        <ol type="A">
+            <li>Primero</li>
+            <li>Segundo</li>
+            <li>Tercero</li>
+            <li>Cuarto</li>
+        </ol>
+
+        <table>
+            <th>
+                <td>Nombre</td>
+                <td>Apellido</td>
+                <td>Club</td>
+            </th>
+            <tr>
+                <td>Diego</td>
+                <td>Gonzalez</td>
+                <td>Velez</td>
+            </tr>
+            <tr>
+                <td>Marcos</td>
+                <td>Torres</td>
+                <td>??</td>
+            </tr>
+        </table>
+
+        <h2>Parte 2</h2>
+
+        <a href="/segunda.html">Segunda</a>
+
+        <button onclick="cambiarEstado()">Haceme Click</button>
+
+        <button onclick="xmlhttp()">Xmlhttp</button>
+    </body>
+</html>

@@ -1,0 +1,8 @@
+{
+    lista: [
+        "Diego Gonzalez",
+        "Marcos Torres",
+        "Maximiliano Garcia Rozado"
+    ],
+    pais: "Argentina"
+}
