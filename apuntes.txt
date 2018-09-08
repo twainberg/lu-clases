@@ -1,0 +1,91 @@
+﻿Consola más amigable: cmder
+
+COMANDOS Consola
+
+    cd <destino> -> cambiar directorio
+    cd ../ -> retrocede un directorio
+    cd / -> vuelve al directorio raíz
+    cls -> limpiar pantalla
+    dir -> muestra directorios
+    mkdir <directorio> -> crea un directorio (md -> abreviatura)
+    rmdir <directorio> -> borra un directorio si esta vacío
+    del <archivo o carpeta> -> borra archivo
+    copy <origen> <destino> -> copia el archivo (robocopy -> optimizado)
+    move <origen> <destino> -> mueve el archivo
+    rename <origen> <destino> -> renombra un archivo
+    TYPE <archivo> -> ver archivo
+    code . -> ejecuta visual code
+    explorer . -> abre el explorador de archivos en la carpeta
+
+
+COMANDOS DOTNET
+
+    dotnet -> ver dotnet
+    dotnet help -> ayuda de comandos
+    dotnet new <tipoDeApp> -> crea aplicacion en el directorio
+    dotnet run -> correr app
+    dotnet new -i NUnit3.DotNetNew.Template -> baja lib de Unit Test de nugget
+    dotnet add reference <ruta> -> agregar referencia a algo en un proyecto
+    dotnet sln add <ruta> -> agregar proyecto a la solucion
+    dotnet test -> correr Unit Test
+    Package para conexion a base -> dotnet add package System.Data.Common/dotnet add package System.Data.SqlClient
+
+Shortcut VSC
+
+    Ctrl + Shift + B -> Build program
+    Ctrl + P -> ver los comandos
+
+GIT
+
+    clear -> limpiar pantalla
+    git init -> inicializa repo (repositorio)
+    touch <archivo> -> crea archivo
+    cat <archivo> -> ver archivo
+    git status -> status de GIT
+    git add <archivo> -> trackea el archivo
+    git add . -> trackea todos los archivos
+    git commit -m "<mensaje>" -> hace commit con el mensaje entre comillas
+    git push origin master -> push (subir cambios al origin)
+    git pull(o fedtch) origin master -> pull (bajar cambios del origin)
+    git pull <link remote> -> pullear repositorio
+    git remote add origin <link remote> -> agregar origin
+    git push -u origin master -> pushear repositorio
+    git config --global user.name "<nombre>" -> configurar nombre
+    git config --global user.email "<email>" -> configurar email
+    git fetch -> revisa repo remoto y comparas con git status 
+
+INTERNET
+
+    URL/URI/URN  -> <idioma>:\\<quien>\<que mando> = http:\\google.com\.... (mandar/pedir info)(tmb puede ser https)
+                                                   = http:\\10.10.10.10?<oper>&<campo>=<valor> (pregunta)(tmb puede ser https)
+    Conexion al sv -> <comando><url> <protocolo/version> <enter>  (comandos -> GET, POST, DELETE, etc.)
+                      <variable> = <valor> <enter> <enter>  (doble <enter> envia)
+
+HTTP-SERVER
+
+    http-server . -> levanta el web server
+    
+Tipos de envio de informacion
+
+    XML
+
+        <persona>
+            <nombre>Diego</nombre>
+            <apellido>Gonzalez</apellido>
+        </persona>
+
+        <persona nombre='Diego' apellido='Gonzalez'></persona>
+
+    JSON
+
+        {
+            nombre: 'Diego',
+            apellido: 'Gonzalez'
+        }
+
+JQUERY
+
+    var <variable> = $() -> selector (retornar array/lista, hay que seleccionar cual se quiere usar con <variable>[i])
+    var <variable> = $('<elemento>') -> trae elementos de ese tipo
+    var <variable> = $('#<id>') -> trae elementos con ese id
+    var <variable> = $('.<nombre>') -> trae elementos de esa clase
